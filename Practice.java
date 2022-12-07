@@ -41,3 +41,55 @@ public int max1020(int a, int b) {
     return 0;
   }
 }
+
+// 12062022
+
+public boolean stringE(String str) {
+  int countE = 0;
+  
+  for (int n = 0; n < str.length(); n++){
+    if (str.substring(n, n + 1).equals("e")){
+      countE += 1;
+    }
+  }
+  
+  if (1 <= countE && countE <= 3){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public boolean lastDigit(int a, int b) {
+  String strA = String.valueOf(a);
+  String strB = String.valueOf(b);
+
+  if (strA.substring(strA.length() - 1).equals(strB.substring(strB.length() - 1))){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public String endUp(String str) {
+  if (str.length() < 4){
+    return str.toUpperCase();
+  }
+  else{
+    return str.substring(0, str.length() - 3) + str.substring(str.length() - 3).toUpperCase();
+  }
+}
+
+public String everyNth(String str, int n) {
+  String returnStr = "";
+  
+  for (int i = 0; i < str.length(); i++){
+    if (i % n == 0){
+      returnStr += str.substring(i, i + 1);
+    }
+  }
+  
+  return returnStr;
+}
