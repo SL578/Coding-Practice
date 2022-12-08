@@ -93,3 +93,41 @@ public String everyNth(String str, int n) {
   
   return returnStr;
 }
+
+// 12072022
+
+public String stringTimes(String str, int n) {
+  String returnStr = "";
+  
+  for (int i = 0; i < n; i++){
+    returnStr += str;
+  }
+  return returnStr;
+}
+
+public String frontTimes(String str, int n) {
+  String returnStr = "";
+  
+  if (str.length() > 2){
+    for (int i = 0; i < n; i++){
+      returnStr += str.substring(0, 3);
+    }
+  }
+  else{
+    for (int i = 0; i < n; i++){
+      returnStr += str;
+    }
+  }
+  return returnStr;
+}
+
+int countXX(String str) {
+  int countXx = 0;
+  
+  for (int i = 0; i < str.length() - 1; i++){
+    if (str.substring(i, i + 2).equals("xx")){
+      countXx += 1;
+    }
+  }
+  return countXx;
+}
