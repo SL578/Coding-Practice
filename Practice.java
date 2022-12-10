@@ -131,3 +131,40 @@ int countXX(String str) {
   }
   return countXx;
 }
+
+// 12092022
+
+boolean doubleX(String str) {
+  if (str.length() < 2){
+    return false;
+  }
+  for (int i = 0; i < str.length() - 1; i++){
+    if (str.substring(i, i + 2).equals("xx")){
+      return true;
+    }
+    if (str.substring(i, i + 1).equals("x")){
+      return false;
+    }
+    continue;
+  }
+  return false;
+}
+
+public String stringBits(String str) {
+  String returnStr = "";
+  for (int i = 0; i < str.length(); i++){
+    if (i % 2 == 0){
+      returnStr += str.substring(i, i + 1);
+    }
+    continue;
+  }
+  return returnStr;
+}
+
+public String stringSplosion(String str) {
+  String returnStr = "";
+  for (int i = 1; i <= str.length(); i++){
+    returnStr += str.substring(0, i);
+  }
+  return returnStr;
+}
