@@ -168,3 +168,43 @@ public String stringSplosion(String str) {
   }
   return returnStr;
 }
+
+// 12102022
+
+public int last2(String str) {
+  int count = 0;
+  for (int i = 0; i < str.length() - 2; i++){
+    if (str.substring(i, i + 2).equals(str.substring(str.length() - 2))){
+      count += 1;
+    }
+  }
+  return count;
+}
+
+public int arrayCount9(int[] nums) {
+  int count = 0;
+  for (int i = 0; i < nums.length; i++){
+    if (nums[i] == 9){
+      count += 1;
+    }
+  }
+  return count;
+}
+
+public boolean arrayFront9(int[] nums) {
+  if (nums.length < 4){
+    for (int i = 0; i < nums.length; i++){
+      if (nums[i] == 9){
+        return true;
+      }
+    }
+  }
+  else{
+    for (int i = 0; i < 4; i++){
+      if (nums[i] == 9){
+        return true;
+      }
+    }
+  }
+  return false;
+}
