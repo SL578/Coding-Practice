@@ -208,3 +208,46 @@ public boolean arrayFront9(int[] nums) {
   }
   return false;
 }
+
+// 12112022
+
+public boolean array123(int[] nums) {
+  for (int i = 0; i < nums.length - 2; i++){
+    if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3){
+      return true;
+    }
+  }
+  return false;
+}
+
+public int stringMatch(String a, String b) {
+  int count = 0;
+  if (a.length() > b.length()){
+    for (int i = 0; i < b.length() - 1; i++){
+      if (a.substring(i, i + 2).equals(b.substring(i, i + 2))){
+        count += 1;
+      }
+    }
+  }
+  else{
+    for (int i = 0; i < a.length() - 1; i++){
+      if (a.substring(i, i + 2).equals(b.substring(i, i + 2))){
+        count += 1;
+      }
+    }
+  }
+  return count;
+}
+
+public String stringX(String str) {
+  String rtrStr = "";
+  for (int i = 0; i < str.length(); i++){
+    if ((i == 0 || i == str.length() - 1) && str.substring(i, i + 1).equals("x")){
+      rtrStr += "x";
+    }
+    if (!str.substring(i, i + 1).equals("x")){
+      rtrStr += str.substring(i, i + 1);
+    }
+  }
+  return rtrStr + "";
+}
