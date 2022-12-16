@@ -252,4 +252,45 @@ public String stringX(String str) {
   return rtrStr + "";
 }
 
-//12142022
+//12152022
+
+public String altPairs(String str) {
+  String rtrStr = "";
+  for (int i = 0; i < str.length(); i += 4){
+    rtrStr += str.substring(i, i + 1);
+    if (i + 1 < str.length()){
+      rtrStr += str.substring(i + 1, i + 2);
+    }
+  }
+  return rtrStr;
+}
+
+public String stringYak(String str) {
+  String rtrStr = "";
+  int contCount = 0;
+  for (int i = 0; i < str.length(); i++){
+    if (contCount > 0){
+      contCount -= 1;
+      continue;
+    }
+    if (i + 2 < str.length() && str.substring(i, i + 1).equals("y") && str.substring(i + 2, i + 3).equals("k")){
+      contCount = 2;
+      continue;
+    }
+    else{
+      contCount -= 1;
+      rtrStr += str.substring(i, i + 1);
+    }
+  }
+  return rtrStr;
+}
+
+public int array667(int[] nums) {
+  int sixCount = 0;
+  for (int i = 0; i < nums.length - 1; i++){
+    if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)){
+      sixCount += 1;
+    }
+  }
+  return sixCount;
+}
