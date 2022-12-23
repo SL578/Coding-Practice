@@ -294,3 +294,23 @@ public int array667(int[] nums) {
   }
   return sixCount;
 }
+
+//12222022
+
+public boolean noTriples(int[] nums) {
+  for (int i = 0; i < nums.length - 2; i++){
+    if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]){
+      return false;
+    }
+  }
+  return true;
+}
+
+public boolean has271(int[] nums) {
+  for (int i = 0; i < nums.length - 2; i++){
+    if (nums[i + 1] == nums[i] + 5 && nums[i + 2] > nums[i] - 4 && nums[i + 2] < nums[i] + 2){
+      return true;
+    }
+  }
+  return false;
+}
