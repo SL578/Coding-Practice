@@ -328,3 +328,22 @@ public String makeAbba(String a, String b) {
 public String makeTags(String tag, String word) {
   return "<" + tag + ">" + word + "</" + tag + ">";
 }
+
+// 12242022
+
+public String makeOutWord(String out, String word) {
+  return out.substring(0, 2) + word + out.substring(2);
+}
+
+public String extraEnd(String str) {
+  return str.substring(str.length() - 2) + str.substring(str.length() - 2) + str.substring(str.length() - 2);
+}
+
+public String firstTwo(String str) {
+  if (str.length() > 1){
+    return str.substring(0, 2);
+  }
+  else{
+    return str;
+  }
+}
