@@ -347,3 +347,27 @@ public String firstTwo(String str) {
     return str;
   }
 }
+
+// 12252022
+
+public String firstHalf(String str) {
+  return str.substring(0, str.length() / 2);
+}
+
+public String withoutEnd(String str) {
+  if (str.length() > 2){
+    return str.substring(1, str.length() - 1);
+  }
+  else{
+    return "";
+  }
+}
+
+public String comboString(String a, String b) {
+  if (a.length() > b.length()){
+    return b + a + b;
+  }
+  else{
+    return a + b + a;
+  }
+}
