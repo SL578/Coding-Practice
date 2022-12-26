@@ -371,3 +371,17 @@ public String comboString(String a, String b) {
     return a + b + a;
   }
 }
+
+// 12262022
+
+public String nonStart(String a, String b) {
+  return a.substring(1) + b.substring(1);
+}
+
+public String left2(String str) {
+  return str.substring(2) + str.substring(0, 2);
+}
+
+public String right2(String str) {
+  return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
+}
