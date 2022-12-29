@@ -385,3 +385,27 @@ public String left2(String str) {
 public String right2(String str) {
   return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
 }
+
+// 12292022
+
+public String theEnd(String str, boolean front) {
+  if (front == true){
+    return str.substring(0, 1);
+  }
+  else{
+    return str.substring(str.length() - 1, str.length());
+  }
+}
+
+public String withouEnd2(String str) {
+  if (str.length() > 2){
+    return str.substring(1, str.length() - 1);
+  }
+  else{
+    return "";
+  }
+}
+
+public String middleTwo(String str) {
+  return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
+}
