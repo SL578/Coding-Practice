@@ -409,3 +409,27 @@ public String withouEnd2(String str) {
 public String middleTwo(String str) {
   return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
 }
+
+// 12302022
+
+public boolean endsLy(String str) {
+  if (str.length() > 1 && str.substring(str.length() - 2).equals("ly")){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public String nTwice(String str, int n) {
+  return str.substring(0, n) + str.substring(str.length()  - n);
+}
+
+public String twoChar(String str, int index) {
+  if (str.length() < index + 2 || index < 0){
+    return str.substring(0, 2);
+  }
+  else{
+    return str.substring(index, index + 2);
+  }
+}
