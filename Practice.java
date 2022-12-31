@@ -433,3 +433,30 @@ public String twoChar(String str, int index) {
     return str.substring(index, index + 2);
   }
 }
+
+// 12312022
+
+public String middleThree(String str) {
+  return str.substring(str.length() / 2 - 1, str.length() / 2 + 2);
+}
+
+public boolean hasBad(String str) {
+  if ((str.length() > 2 && (str.substring(0, 3).equals("bad")) || (str.length() > 3 && str.substring(1, 4).equals("bad")))){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public String atFirst(String str) {
+  if (str.length() > 1){
+    return str.substring(0, 2);
+  }
+  if (str.length() == 0){
+    return "@@";
+  }
+  else{
+    return str + "@";
+  }
+}
