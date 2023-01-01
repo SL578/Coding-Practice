@@ -460,3 +460,40 @@ public String atFirst(String str) {
     return str + "@";
   }
 }
+
+// 01012023
+
+public String lastChars(String a, String b) {
+  if (a.length() > 0 && b.length() > 0){
+    return a.substring(0, 1) + b.substring(b.length() - 1);
+  }
+  if (a.length() > 0 && b.length() < 1){
+    return a.substring(0, 1) + "@";
+  }
+  if (a.length() < 1 && b.length() > 0){
+    return "@" + b.substring(b.length() - 1);
+  }
+  else{
+    return "@@";
+  }
+}
+
+public String conCat(String a, String b) {
+  if (a.length() > 0 && b.length() > 0 && a.substring(a.length() - 1).equals
+    (b.substring(0, 1))){
+    return a.substring(0, a.length()) + b.substring(1);
+  }
+  else{
+    return a + b;
+  }
+}
+
+public String lastTwo(String str) {
+  if (str.length() > 1){
+    return str.substring(0, str.length() - 2) + str.substring(str.length() - 1)
+     + str.substring(str.length() - 2, str.length() - 1);
+  }
+  else{
+    return str;
+  }
+}
