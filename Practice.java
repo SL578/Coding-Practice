@@ -497,3 +497,38 @@ public String lastTwo(String str) {
     return str;
   }
 }
+
+// 01022023
+
+public String seeColor(String str) {
+  if (str.length() > 2 && str.substring(0, 3).equals("red")){
+    return "red";
+  }
+  if (str.length() > 3 && str.substring(0, 4).equals("blue")){
+    return "blue";
+  }
+  else{
+    return "";
+  }
+}
+
+public boolean frontAgain(String str) {
+  if (str.length() > 1  && str.substring(0, 2).equals(str.substring(str.length() - 2))){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public String minCat(String a, String b) {
+  if (a.length() == b.length()){
+    return a + b;
+  }
+  if (a.length() > b.length()){
+    return a.substring(a.length() - b.length()) + b;
+  }
+  else{
+    return a + b.substring(b.length() - a.length());
+  }
+}
