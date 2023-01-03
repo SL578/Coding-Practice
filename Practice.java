@@ -532,3 +532,41 @@ public String minCat(String a, String b) {
     return a + b.substring(b.length() - a.length());
   }
 }
+
+// 01032023
+
+public String extraFront(String str) {
+  if (str.length() > 1){
+    return str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
+  }
+  else{
+    return str + str + str;
+  }
+}
+
+public String without2(String str) {
+  if (str.length() > 2 && str.substring(0, 2).equals(str.substring(str.length() - 2))){
+    return str.substring(2);
+  }
+  if (str.length() == 2){
+    return "";
+  }
+  else{
+    return str;
+  }
+}
+
+public String deFront(String str) {    
+  if (str.substring(0, 1).equals("a") && str.substring(1, 2).equals("b")){
+    return str;
+  }
+  if (str.substring(1, 2).equals("b") && !str.substring(0, 1).equals("a")){
+    return str.substring(1);
+  }
+  if (!str.substring(0, 1).equals("a") && !str.substring(1, 2).equals("b")){
+    return str.substring(2);
+  }
+  else{
+    return str.substring(0, 1) + str.substring(2);
+  }
+}
