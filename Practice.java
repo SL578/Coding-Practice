@@ -583,3 +583,21 @@ public String startWord(String str, String word) {
 }
 
 // 01062023
+
+public String withoutX(String str) {
+  if (str.length() > 1 && (str.substring(0, 1).equals("x") && str.substring(str.length() - 1).equals("x"))){
+    return str.substring(1, str.length() - 1);
+  }
+  if (str.length() > 1 && str.substring(0, 1).equals("x")){
+    return str.substring(1);
+  }
+  if (str.length() > 1 && str.substring(str.length() - 1).equals("x")){
+    return str.substring(0, str.length() - 1);
+  }
+  if (str.length() < 2){
+    return "";
+  }
+  else{
+    return str;
+  }
+}
