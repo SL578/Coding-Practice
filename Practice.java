@@ -601,3 +601,28 @@ public String withoutX(String str) {
     return str;
   }
 }
+
+// 01072023
+
+public String withoutX2(String str) {
+  // length == 0 exception
+  if (str.length() < 1){
+    return "";
+  }
+  // all "x"es
+  if (str.length() > 1 && str.substring(0, 2).equals("xx")){
+    return str.substring(2);
+  }
+  // only first is "x"
+  if (str.substring(0, 1).equals("x")){
+    return str.substring(1);
+  }
+  // only second is "x"
+  if (str.length() > 1 && str.substring(1, 2).equals("x")){
+    return str.substring(0, 1) + str.substring(2);
+  }
+  // no "x"es
+  else{
+    return str;
+  }
+}
