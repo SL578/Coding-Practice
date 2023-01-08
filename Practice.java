@@ -626,3 +626,31 @@ public String withoutX2(String str) {
     return str;
   }
 }
+
+// 01082023
+
+public boolean firstLast6(int[] nums) {
+  if (nums[0] == 6 || nums[nums.length - 1] == 6){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public boolean sameFirstLast(int[] nums) {
+  if (nums.length > 0 && nums[0] == nums[nums.length - 1]){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+public int[] makePi() {
+  int[] makePi = new int[3];
+  makePi[0] = 3;
+  makePi[1] = 1;
+  makePi[2] = 4;
+  return makePi;
+}
