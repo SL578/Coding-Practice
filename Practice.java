@@ -672,4 +672,10 @@ public int sum3(int[] nums) {
   return nums[0] + nums[1] + nums;
 }
 
-// 01142023
+// 01152023
+
+public int[] rotateLeft3(int[] nums) {
+  int[] newnums = new int[3];
+  newnums[0] = nums[1]; newnums[1] = nums[2]; newnums[2] = nums[0];
+  return newnums;
+}
