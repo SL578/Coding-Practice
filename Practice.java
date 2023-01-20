@@ -687,3 +687,16 @@ public int[] reverse3(int[] nums) {
   returnnums[0] = nums[2]; returnnums[1] = nums[1]; returnnums[2] = nums[0];
   return returnnums;
 }
+
+// 01202023
+
+public int[] maxEnd3(int[] nums) {
+  int[] rtrnums = new int[3];
+  if (nums[0] >= nums[2]){
+    rtrnums[0] = nums[0]; rtrnums[1] = nums[0]; rtrnums[2] = nums[0];
+  }
+  else{
+    rtrnums[0] = nums[2]; rtrnums[1] = nums[2]; rtrnums[2] = nums[2];
+  }
+  return rtrnums;
+}
