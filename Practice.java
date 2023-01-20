@@ -679,3 +679,11 @@ public int[] rotateLeft3(int[] nums) {
   newnums[0] = nums[1]; newnums[1] = nums[2]; newnums[2] = nums[0];
   return newnums;
 }
+
+// 01192023
+
+public int[] reverse3(int[] nums) {
+  int[] returnnums = new int[3];
+  returnnums[0] = nums[2]; returnnums[1] = nums[1]; returnnums[2] = nums[0];
+  return returnnums;
+}
