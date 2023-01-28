@@ -714,3 +714,12 @@ public int sum2(int[] nums) {
     return 0;
   }
 }
+
+// 01272023
+
+public int[] middleWay(int[] a, int[] b) {
+  int[] rtrInt = new int[2];
+  rtrInt[0] = a[1];
+  rtrInt[1] = b[1];
+  return rtrInt;
+}
