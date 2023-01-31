@@ -723,3 +723,11 @@ public int[] middleWay(int[] a, int[] b) {
   rtrInt[1] = b[1];
   return rtrInt;
 }
+
+// 01302023
+
+public int[] makeEnds(int[] nums) {
+  int[] returnInt = new int[2];
+  returnInt[0] = nums[0]; returnInt[1] = nums[nums.length - 1];
+  return returnInt;
+}
