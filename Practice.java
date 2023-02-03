@@ -731,3 +731,14 @@ public int[] makeEnds(int[] nums) {
   returnInt[0] = nums[0]; returnInt[1] = nums[nums.length - 1];
   return returnInt;
 }
+
+// 02032023
+
+public boolean has23(int[] nums) {
+  if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
