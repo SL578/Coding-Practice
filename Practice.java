@@ -769,3 +769,19 @@ public boolean double23(int[] nums) {
     return false;
   }
 }
+
+// 02042023
+
+public int[] fix23(int[] nums) {
+  int[] rtrInt = new int[3];
+  if (nums[0] == 2 && nums[1] == 3){
+    rtrInt[0] = nums[0]; rtrInt[1] = 0; rtrInt[2] = nums[2];
+  }
+  else if (nums[1] == 2 && nums[2] == 3){
+    rtrInt[0] = nums[0]; rtrInt[1] = nums[1]; rtrInt[2] = 0;
+  }
+  else{
+    rtrInt = nums;
+  }
+  return rtrInt;
+}
