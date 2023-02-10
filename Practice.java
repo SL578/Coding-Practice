@@ -807,3 +807,12 @@ public int[] biggerTwo(int[] a, int[] b) {
     return b;
   }
 }
+
+// 02092023
+
+public int[] makeMiddle(int[] nums) {
+  int[] rtrInt = new int[2];
+  rtrInt[0] = nums[nums.length / 2 - 1];
+  rtrInt[1] = nums[nums.length / 2];
+  return rtrInt;
+}
