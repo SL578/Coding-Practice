@@ -816,3 +816,11 @@ public int[] makeMiddle(int[] nums) {
   rtrInt[1] = nums[nums.length / 2];
   return rtrInt;
 }
+
+// 02102023
+
+public int[] plusTwo(int[] a, int[] b) {
+  int[] rtrInt = new int[4];
+  rtrInt[0] = a[0]; rtrInt[1] = a[1]; rtrInt[2] = b[0]; rtrInt[3] = b[1];
+  return rtrInt;
+}
