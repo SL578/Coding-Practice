@@ -824,3 +824,13 @@ public int[] plusTwo(int[] a, int[] b) {
   rtrInt[0] = a[0]; rtrInt[1] = a[1]; rtrInt[2] = b[0]; rtrInt[3] = b[1];
   return rtrInt;
 }
+
+// 02122023
+
+public int[] swapEnds(int[] nums) {
+  int temp = nums[0];
+  int[] rtrInt = new int[nums.length];
+  rtrInt = nums;
+  rtrInt[0] = nums[nums.length - 1]; rtrInt[nums.length - 1] = temp;
+  return rtrInt;
+}
