@@ -834,3 +834,11 @@ public int[] swapEnds(int[] nums) {
   rtrInt[0] = nums[nums.length - 1]; rtrInt[nums.length - 1] = temp;
   return rtrInt;
 }
+
+// 01132023
+
+public int[] midThree(int[] nums) {
+  int[] rtrInt = new int[3];
+  rtrInt[0] = nums[nums.length / 2 - 1]; rtrInt[1] = nums[nums.length / 2]; rtrInt[2] = nums[nums.length / 2 + 1];
+  return rtrInt;
+}
