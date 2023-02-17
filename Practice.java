@@ -842,3 +842,16 @@ public int[] midThree(int[] nums) {
   rtrInt[0] = nums[nums.length / 2 - 1]; rtrInt[1] = nums[nums.length / 2]; rtrInt[2] = nums[nums.length / 2 + 1];
   return rtrInt;
 }
+
+// 02162023
+
+public int maxTriple(int[] nums) {
+  int largest = nums[0];
+  if (nums[nums.length / 2] > largest){
+    largest = nums[nums.length / 2];
+  }
+  if (nums[nums.length - 1] > largest){
+    largest = nums[nums.length - 1];
+  }
+  return largest;
+}
