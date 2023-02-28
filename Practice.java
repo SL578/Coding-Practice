@@ -855,3 +855,16 @@ public int maxTriple(int[] nums) {
   }
   return largest;
 }
+
+// 02272023
+
+public int[] frontPiece(int[] nums) {
+  int[] rtrInt = new int[2];
+  if (nums.length > 1){
+    rtrInt[0] = nums[0]; rtrInt[1] = nums[1];
+  }
+  else{
+    rtrInt = nums;
+  }
+  return rtrInt;
+}
