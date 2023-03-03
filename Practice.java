@@ -884,3 +884,18 @@ public boolean unlucky1(int[] nums) {
     return false;
   }
 }
+
+// 03022023
+public int[] make2(int[] a, int[] b) {
+  int[] rtrInt = new int[2];
+  if (a.length > 1){
+    rtrInt[0] = a[0]; rtrInt[1] = a[1];
+  }
+  else if (a.length == 1){
+    rtrInt[0] = a[0]; rtrInt[1] = b[0];
+  }
+  else{
+    rtrInt[0] = b[0]; rtrInt[1] = b[1];
+  }
+  return rtrInt;
+}
