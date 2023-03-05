@@ -899,3 +899,24 @@ public int[] make2(int[] a, int[] b) {
   }
   return rtrInt;
 }
+
+// 03042023
+public int[] front11(int[] a, int[] b) {
+  int[] rtrInt;
+  if (a.length > 0 && b.length > 0){
+    rtrInt = new int[2];
+    rtrInt[0] = a[0]; rtrInt[1] = b[0];
+  }
+  else if (a.length > 0){
+    rtrInt = new int[1];
+    rtrInt[0] = a[0];
+  }
+  else if (b.length > 0){
+    rtrInt = new int[1];
+    rtrInt[0] = b[0];
+  }
+  else{
+    rtrInt = new int[0];
+  }
+  return rtrInt;
+}
