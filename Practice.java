@@ -920,3 +920,28 @@ public int[] front11(int[] a, int[] b) {
   }
   return rtrInt;
 }
+
+// 04142023
+public int countEvens(int[] nums) {
+  int count = 0;
+  for (int i = 0; i < nums.length; i++){
+    if (nums[i] % 2 == 0){
+      count++;
+    }
+  }
+  return count;
+}
+
+public int bigDiff(int[] nums) {
+  int largestPos = 0;
+  int smallestPos = 0;
+  for (int i = 0; i < nums.length; i++){
+    if (Math.max(nums[largestPos], nums[i]) != nums[largestPos]){
+      largestPos = i;
+    }
+    else if (Math.min(nums[smallestPos], nums[i]) != nums[smallestPos]){
+      smallestPos = i;
+    }
+  }
+  return nums[largestPos] - nums[smallestPos];
+}
