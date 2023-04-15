@@ -945,3 +945,32 @@ public int bigDiff(int[] nums) {
   }
   return nums[largestPos] - nums[smallestPos];
 }
+
+public int centeredAverage(int[] nums) {
+  int largestPos = 0;
+  int smallestPos = 0;
+  int total = 0;
+  for (int i = 0; i < nums.length; i++){
+    if (Math.max(nums[largestPos], nums[i]) != nums[largestPos]){
+      largestPos = i;
+    }
+    else if (Math.min(nums[smallestPos], nums[i]) != nums[smallestPos]){
+      smallestPos = i;
+    }
+  total += nums[i];
+  }
+  return (total -= nums[largestPos] + nums[smallestPos]) / (nums.length - 2);
+}
+
+public int sum13(int[] nums) {
+  int total = 0;
+  for (int i = 0; i < nums.length; i++){
+    if (nums[i] == 13){
+      i++;
+    }
+    else{
+      total += nums[i];
+    }
+  }
+  return total;
+}
