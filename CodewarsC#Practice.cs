@@ -7,3 +7,15 @@ public class Kata
   }
 }
 
+// 08122023 https://www.codewars.com/kata/56b1f01c247c01db92000076/train/csharp
+public class Kata
+{
+  public static string DoubleChar(string s)
+  {
+    string returnString = "";
+    foreach (char ch in s){
+      returnString += ch.ToString() + ch.ToString();
+    }
+    return returnString;
+  }
+}
