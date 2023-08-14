@@ -19,3 +19,28 @@ public class Kata
     return returnString;
   }
 }
+
+// 08132023 https://www.codewars.com/kata/56efc695740d30f963000557/train/csharp
+// I don't actually know how this works. I just messed around and it started working.
+using System;
+
+namespace Extensions
+{
+  public static class StringExt
+  {
+    public static string ToAlternatingCase (this string s)
+    {
+      char[] characters = s.ToCharArray();
+      for (int i = 0; i < characters.Length; i+=1) {
+        if (char.IsUpper(characters[i])){
+          characters[i] = char.ToLower(characters[i]);
+        }
+        else if (char.IsLower(characters[i])){
+          characters[i] = char.ToUpper(characters[i]);
+        }
+      }
+      string text = new string(characters);
+      return text;
+    }
+  }
+}
