@@ -44,3 +44,18 @@ namespace Extensions
     }
   }
 }
+
+// 08142023 https://www.codewars.com/kata/58ca658cc0d6401f2700045f/train/csharp
+using System.Collections.Generic;
+
+public class Kata
+{
+  public static List<int> FindMultiples(int integer, int limit)
+  {
+    List<int> rtrLst = new List<int>();
+    for (int n = 1; n <= limit / integer; n++){
+      rtrLst.Add(integer * n);
+    }
+    return rtrLst;
+  }
+}
