@@ -59,3 +59,11 @@ public class Kata
     return rtrLst;
   }
 }
+
+// 08152023 https://www.codewars.com/kata/523b623152af8a30c6000027/train/csharp
+public class Kata
+{
+  public static double Square(double dbl){
+    return dbl * dbl;
+  }
+}
