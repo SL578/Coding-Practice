@@ -67,3 +67,13 @@ public class Kata
     return dbl * dbl;
   }
 }
+
+// 08162023 https://www.codewars.com/kata/55fab1ffda3e2e44f00000c6/train/csharp
+using System;
+public class Cockroach
+{
+  public static int CockroachSpeed(double x)
+  {
+    return Convert.ToInt32(Math.Floor(x * 250 / 9));
+  }
+}
