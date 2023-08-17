@@ -77,3 +77,20 @@ public class Cockroach
     return Convert.ToInt32(Math.Floor(x * 250 / 9));
   }
 }
+
+// 08172023 https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/csharp
+public class Kata
+{
+  public static int SaleHotDogs(int n)
+  {
+    if (n < 5){
+      return 100 * n;
+    }
+    else if (n >= 5 && n < 10){
+      return 95 * n;
+    }
+    else{
+      return 90 * n;
+    }
+  }
+}
