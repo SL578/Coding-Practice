@@ -116,3 +116,38 @@ public static class Kata
     public static int copa_del_rey_goals = 5;
     public static int total_goals = 58;
 }
+
+// 08202023 https://www.codewars.com/kata/576b93db1129fcf2200001e6/train/csharp
+using System;
+using System.Linq;
+
+public static class Kata
+{
+  public static int Sum(int[] numbers)
+  {
+    if (numbers == null){
+      return 0;
+    }
+    else if (numbers.Length > 1){
+      int highest = numbers[0];
+      int lowest = numbers[0];
+      int sum = 0;
+      
+      foreach (int i in numbers){
+        if (i > highest){
+         highest = i;
+        }
+        else if (i < lowest){
+         lowest = i;
+        }
+      }
+      foreach (int n in numbers){
+        sum += n;
+      }
+      return sum - highest - lowest;
+    }
+    else{
+      return 0;
+    }
+  }
+}
