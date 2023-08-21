@@ -151,3 +151,19 @@ public static class Kata
     }
   }
 }
+
+// 08212023 https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/csharp
+using System.Collections.Generic;
+public class LineNumbering 
+{
+    public static List<string> Number(List<string> lines) 
+    {
+      List<string> rtrLst = new List<string>();
+      if (lines.Count > 0){
+        for (int i = 1; i <= lines.Count; i++){
+          rtrLst.Add(i.ToString() + ": " + lines[i - 1]);
+        }
+      }
+      return rtrLst;
+    }
+}
