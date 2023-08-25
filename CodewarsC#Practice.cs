@@ -167,3 +167,30 @@ public class LineNumbering
       return rtrLst;
     }
 }
+
+// 08242023 https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/csharp
+public class Kata
+{
+  public static int[] SortNumbers(int[] nums)
+  {
+    int[] rtrLst = nums;
+    if (nums == null || nums.Length == 0){
+      return new int[]{};
+    }
+    for (int i = 0; i < nums.Length - 1; i++){
+      int numSwaps = 0;
+      for (int e = 0; e < nums.Length - 1; e++){
+        if (nums[e] > nums[e+1]){
+          int temp = rtrLst[e];
+          rtrLst[e] = rtrLst[e + 1];
+          rtrLst[e + 1] = temp;
+          numSwaps++;
+        }
+      }
+      if (numSwaps == 0){
+        break;
+      }
+    }
+    return rtrLst;
+  }
+}
