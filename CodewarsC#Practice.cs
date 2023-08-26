@@ -194,3 +194,29 @@ public class Kata
     return rtrLst;
   }
 }
+
+// 08262023 https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/csharp
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public static class Kata
+{
+  public static int DescendingOrder(int num)
+  {
+    int length = 0;
+    List<int> rtrLst = new List<int>();
+    int rtrInt = 0;
+    while (num > 0){
+      rtrLst.Add(num % 10);
+      num /= 10;
+      length += 1;
+    }
+    rtrLst.Sort();
+    rtrLst.Reverse();
+    for (int i = 0; i < rtrLst.Count; i++){
+      rtrInt += Convert.ToInt32(rtrLst[i] * Math.Pow(10, length - 1));
+      length -= 1;
+    }
+    return rtrInt;
+  }
+}
