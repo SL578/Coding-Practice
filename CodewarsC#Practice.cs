@@ -220,3 +220,24 @@ public static class Kata
     return rtrInt;
   }
 }
+
+// 08272023 WIP https://www.codewars.com/kata/5583090cbe83f4fd8c000051/train/csharp
+using System;
+using System.Collections.Generic;
+
+namespace Solution
+{
+  class Digitizer
+  {
+    public static long[] Digitize(long n)
+    {
+      int n0 = Convert.ToInt32(n);
+      long[] rtrAry = new long[n.ToString().Length];
+      for (int i = n.ToString().Length - 1; i > 0; i--){
+        rtrAry[n] = n0 % 10;
+        n0 /= 10;
+      }
+      return rtrAry;
+    }
+  }
+}
